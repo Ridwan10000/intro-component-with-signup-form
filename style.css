@@ -1,0 +1,130 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+:root{
+    --bg-color:hsl(0, 100%, 74%);
+    --btn-color:hsl(154, 59%, 51%);
+    --trial-color:hsl(248, 32%, 49%);
+    --footer-color: hsl(246, 25%, 77%);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-image: url('/images/bg-intro-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:var(--bg-color);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .container{
+    width:90vw;
+    max-width: calc(0.8 * 700px);
+    margin-top: 6rem;
+  }
+  h1{
+    font-size:1.7rem;
+  }
+  P {
+    margin-top: 1.5rem;
+  }
+  .try-it{
+    margin-top:5rem;
+    background-color: var(--trial-color);
+    padding:0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 7px 0px 1px rgba(0,0,0,0.3);
+  }
+  form{
+    margin-top:3rem;
+    margin-bottom: 3rem;
+    color:black;
+    background-color: white;
+    padding:1rem 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 3px 2px rgba(0,0,0,0.3);
+  }
+  input{
+    padding:0.8rem 1rem;
+    width: 90%;
+    border-radius: 0.5rem;
+    border: 0.5px solid grey;
+  }
+  input:nth-child(n+1){
+    margin-top: 1rem;
+  }
+
+  form a {
+    text-decoration: none;
+    color: red;
+  }
+  button[type="submit"]{
+    color:white;
+    font-size: 1.1rem;
+    margin-top:1rem;
+    width: 90%;
+    padding:0.8rem 1rem;
+    border-radius: 0.5rem;
+    border:none;
+    background-color: var(--btn-color);
+    text-transform: uppercase;
+    box-shadow: 0 3px 2px 2px rgba(0,0,0,0.3);
+  }
+  button[type="submit"]:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  footer{
+    margin: 1rem 2.5rem;
+    font-size: 0.7rem;
+    color: var(--footer-color);
+  }
+  @media screen and (min-width:800px){
+    body{
+        background-image: url('/images/bg-intro-desktop.png');
+    }
+   .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 90px;
+   }
+   h1{
+    text-align: left;
+    font-size: 2.5rem;
+   }
+   p{
+    text-align: left;
+   }
+   form{
+    margin-top: 1.5rem;
+   }
+  }
