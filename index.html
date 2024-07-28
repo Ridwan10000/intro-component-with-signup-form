@@ -35,18 +35,33 @@
       </div>
   
       <form action="" novalidate>
-       <div class="first-name"> <input type="text" id="first-name" placeholder="First Name" required class="active"></div>
-        <input type="text" id="last-name" placeholder="Last Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="password" placeholder="Password" required>
-  
+       <div class="input first-name"> 
+        <input type="text" id="first-name" placeholder="First Name" required autocomplete="on" value="">
+        <img src="/images/icon-error.svg" alt="">
+      </div>
+      <div class="error-message">First Name cannot be empty</div>
+       <div class="input last-name">
+        <input type="text" id="last-name" placeholder="Last Name" required autocomplete="on" value="">
+        <img src="/images/icon-error.svg" alt="">
+       </div>
+       <div class="error-message">Last Name cannot be empty</div>
+       <div class="input e-mail">
+        <input type="email" id="e-mail" placeholder="Email Address" required autocomplete="on" value="">
+        <img src="/images/icon-error.svg" alt="">
+       </div>
+       <div class="error-message">Looks like this is not an email</div>
+        <div class="input pass-word">
+          <input type="password" id="password" placeholder="Password" required value="">
+          <img src="/images/icon-error.svg" alt="">
+        </div>
+        <div class="error-message">Password cannot be empty</div>
         <button type="submit">Claim your free trial </button>
   
         <footer> By clicking the button, you are agreeing to our <a href="">Terms and Services</a></footer>
       </form>
     </section>
   </main>
-
+  <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
